@@ -1,0 +1,88 @@
+{
+  "product": "Mimecast",
+  "last_updated": "2025-07-21T08:43:19.388647",
+  "total_reviews": 5,
+  "reviews": [
+    {
+      "platform": "Reddit r/cybersecurity",
+      "product": "Mimecast",
+      "rating": 3,
+      "review_text": "Defender Phishing Simulation links + Mimecast URL rewriting. We've been testing out the Defender attack simulation capabilities recently and have come across a small issue with its compatibility with our email security setup.\n\nWe use Mimecast which has a URL protection feature that rewrites links received from external addresses with the prefix [https://url.au.m.mimecastprotect.com/s/](https://url.au.m.mimecastprotect.com/s/)\n\nSince the simulation emails sent from Defender are internal they don't pass through Mimecast and don't get any links rewritten, wh",
+      "reviewer": "u/PatrickWellbutrin",
+      "source_url": "https://www.reddit.com/r/cybersecurity/comments/1krlnft/defender_phishing_simulation_links_mimecast_url/",
+      "date_scraped": "2025-05-20T18:18:30",
+      "content_type": "customer_experience",
+      "verified": true,
+      "upvotes": 6,
+      "num_comments": 1,
+      "customer_score": 2,
+      "authenticity": "verified_customer_experience"
+    },
+    {
+      "platform": "Reddit r/cybersecurity",
+      "product": "Mimecast",
+      "rating": 3,
+      "review_text": "Defender Phishing Simulation links + Mimecast URL rewriting. We've been testing out the Defender attack simulation capabilities recently and have come across a small issue with its compatibility with our email security setup.\n\nWe use Mimecast which has a URL protection feature that rewrites links received from external addresses with the prefix [https://url.au.m.mimecastprotect.com/s/](https://url.au.m.mimecastprotect.com/s/)\n\nSince the simulation emails sent from Defender are internal they don't pass through Mimecast and don't get any links rewritten, wh",
+      "reviewer": "u/PatrickWellbutrin",
+      "source_url": "https://www.reddit.com/r/cybersecurity/comments/1krlnft/defender_phishing_simulation_links_mimecast_url/",
+      "date_scraped": "2025-05-20T18:18:30",
+      "content_type": "customer_experience",
+      "verified": true,
+      "upvotes": 6,
+      "num_comments": 1,
+      "customer_score": 2,
+      "authenticity": "verified_customer_experience"
+    },
+    {
+      "platform": "Reddit r/sysadmin",
+      "product": "Mimecast",
+      "rating": 3,
+      "review_text": "Mimecast Implementation. Hey all, i’m currently in the process of implementing Mimecast for my company. I have mapped policies from 365, managed senders, set up journalling etc etc and are at the point of setting up the outbound mail flow connector.\n\nHave any of you guys gone through a mimecast migration and anything you would advise to someone now going through it? I really want this to be as seamless as possible and keen to know of anything to watch out for",
+      "reviewer": "u/lockblack1",
+      "source_url": "https://www.reddit.com/r/sysadmin/comments/1kpcaia/mimecast_implementation/",
+      "date_scraped": "2025-05-17T22:08:16",
+      "content_type": "customer_experience",
+      "verified": true,
+      "upvotes": 2,
+      "num_comments": 3,
+      "customer_score": 1,
+      "authenticity": "verified_customer_experience"
+    },
+    {
+      "platform": "Reddit r/cybersecurity",
+      "product": "Mimecast",
+      "rating": 4,
+      "review_text": "DMARC issue - over 200 domains.... I'm consulting for an organization managing over 200 domains, each with individually configured SPF, DKIM, and DMARC records. Maintaining separate configurations for each domain is highly inefficient and error-prone.\n\nWhat are the best approaches to centralize and streamline SPF, DKIM, and DMARC management across all domains? Potential solutions I'm considering include:\n\n* **Organizational DMARC Policies** – Implementing a single DMARC record at the apex domain to enforce policy inheritance for ",
+      "reviewer": "u/kutabare_86",
+      "source_url": "https://www.reddit.com/r/cybersecurity/comments/1ido1h9/dmarc_issue_over_200_domains/",
+      "date_scraped": "2025-01-30T06:22:29",
+      "content_type": "customer_experience",
+      "verified": true,
+      "upvotes": 1,
+      "num_comments": 8,
+      "customer_score": 2,
+      "authenticity": "verified_customer_experience"
+    },
+    {
+      "platform": "Reddit r/Office365",
+      "product": "Mimecast",
+      "rating": 3,
+      "review_text": "Exchange Online External OOO Intermittent. Hello\n\nWe are currently using Exchange Online with a hybrid connector to 2016 On Prem.\n\nExternal email is sent from Exchange Online via smart host connectors to Mimecast.\n\nWe are seeing issues with receiving Out Of Office messages to mainly webmail domains (Hotmail, Gmail, Yahoo, Sky etc) although this does extend to corporate domains also.\n\nThe end user does not receive the OOO and no NDR or context is provided.\n\nExchange Online message trace as expected shows a drop for the internal OOO and a ",
+      "reviewer": "u/Top-Chapter-7405",
+      "source_url": "https://www.reddit.com/r/Office365/comments/1gka680/exchange_online_external_ooo_intermittent/",
+      "date_scraped": "2024-11-05T08:06:17",
+      "content_type": "customer_experience",
+      "verified": true,
+      "upvotes": 1,
+      "num_comments": 1,
+      "customer_score": 1,
+      "authenticity": "verified_customer_experience"
+    }
+  ],
+  "source_platforms": [
+    "Reddit r/Office365",
+    "Reddit r/sysadmin",
+    "Reddit r/cybersecurity"
+  ],
+  "cache_version": "2.0"
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React App Test</title>
+</head>
+<body>
+    <div id="root"></div>
+    <script>
+        // Simple test to check if React is loading
+        console.log("HTML page loaded");
+        
+        // Check if React root element exists
+        const root = document.getElementById('root');
+        if (root) {
+            console.log("Root element found");
+        } else {
+            console.log("Root element NOT found");
+        }
+        
+        // Wait a bit and check if React has mounted
+        setTimeout(() => {
+            if (root && root.innerHTML) {
+                console.log("React app mounted:", root.innerHTML.substring(0, 100));
+            } else {
+                console.log("React app NOT mounted - white screen issue");
+            }
+        }, 2000);
+    </script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+{
+  "product": "Mimecast",
+  "last_updated": "2025-06-30T17:39:24.706052",
+  "total_reviews": 9,
+  "reviews": [
+    {
+      "platform": "Tech Community",
+      "product": "Mimecast",
+      "rating": 3,
+      "review_text": "Company Out of Office emails bouncing to hotmail, but not gmail domains\n\nHi all,\n\nWe're experiencing some odd behavior with Outlook Out of Office responses sent to external hotmail addresses. We route our mail through Mimecast. When an external hotmail address emails an internal account that has OOO set, they do not receive the OOO response. In Mimecast, I can see two lo",
+      "reviewer": "Chewie8083",
+      "source_url": "https://reddit.com/r/sysadmin/comments/1lo2rmf/company_out_of_office_emails_bouncing_to_hotmail/",
+      "date_scraped": "2025-06-30T17:39:23.705085",
+      "content_type": "community_discussion",
+      "verified": true,
+      "scraping_source": "alternative_api"
+    },
+    {
+      "platform": "Tech Community",
+      "product": "Mimecast",
+      "rating": 5,
+      "review_text": "Delivery incomplete error I can't figure out\n\nHey y'all. \n\n  \nI'm managing a newsletter and I created a custom domain to send with. It was supposedly getting warmed through my email send platform (beehiiv). \n\n  \nWhen I send emails through beehiiv, everything works fine. \n\n  \nThe email goes out with our custom domain as a sender\n\nWe get people's",
+      "reviewer": "CHONKY_Om",
+      "source_url": "https://reddit.com/r/GMail/comments/1lo3wkt/delivery_incomplete_error_i_cant_figure_out/",
+      "date_scraped": "2025-06-30T17:39:23.705038",
+      "content_type": "community_discussion",
+      "verified": true,
+      "scraping_source": "alternative_api"
+    },
+    {
+      "platform": "Tech Community",
+      "product": "Mimecast",
+      "rating": 5,
+      "review_text": "Error I can't figure out that seems to have something to do with Mimecast\n\nHey y'all. \n\n  \nI'm managing a newsletter and I created a custom domain to send with. It was supposedly getting warmed through my email send platform (beehiiv). \n\n  \nWhen I send emails through beehiiv, everything works fine. \n\n  \nThe email goes out with our custom domain as a sender\n\nWe get people's",
+      "reviewer": "CHONKY_Om",
+      "source_url": "https://reddit.com/r/mimecast/comments/1lo3wye/error_i_cant_figure_out_that_seems_to_have/",
+      "date_scraped": "2025-06-30T17:39:23.704983",
+      "content_type": "community_discussion",
+      "verified": true,
+      "scraping_source": "alternative_api"
+    },
+    {
+      "platform": "Tech Community",
+      "product": "Mimecast",
+      "rating": 3,
+      "review_text": "Impersonation Protection\n\nWe currently layer Mimecast on top of O365.  My one issue with both of these solutions is the monitoring list is updated manually.  So new and old users need to be added/removed manually.  What are others doing to combat these gmail emails pretending to be internal users?  Were at 500 user which is ",
+      "reviewer": "Chrys6571",
+      "source_url": "https://reddit.com/r/sysadmin/comments/1loaevj/impersonation_protection/",
+      "date_scraped": "2025-06-30T17:39:23.704912",
+      "content_type": "community_discussion",
+      "verified": true,
+      "scraping_source": "alternative_api"
+    },
+    {
+      "platform": "Tech Community",
+      "product": "Mimecast",
+      "rating": 3,
+      "review_text": "Mimecast Explores Options Including a Possible Sale\n\n",
+      "reviewer": "1cvmask",
+      "source_url": "https://www.wsj.com/articles/mimecast-explores-options-including-a-possible-sale-11635367602",
+      "date_scraped": "2025-06-30T17:39:22.401352",
+      "content_type": "community_discussion",
+      "verified": true,
+      "scraping_source": "alternative_api"
+    },
+    {
+      "platform": "Tech Community",
+      "product": "Mimecast",
+      "rating": 3,
+      "review_text": "Mimecast Is Down\n\n",
+      "reviewer": "JacobHenner",
+      "source_url": "https://status.mimecast.com/pages/incident/5d849b1c02e65b3ec45369d4/62711c6f1f440c053a55ea60",
+      "date_scraped": "2025-06-30T17:39:22.401345",
+      "content_type": "community_discussion",
+      "verified": true,
+      "scraping_source": "alternative_api"
+    },
+    {
+      "platform": "Tech Community",
+      "product": "Mimecast",
+      "rating": 3,
+      "review_text": "Dmarc Analyser Aquired by Mimecast\n\n",
+      "reviewer": "sbuk",
+      "source_url": "https://www.dmarcanalyzer.com/mimecast-announces-acquisition-of-dmarc-analyzer/",
+      "date_scraped": "2025-06-30T17:39:22.401339",
+      "content_type": "community_discussion",
+      "verified": true,
+      "scraping_source": "alternative_api"
+    },
+    {
+      "platform": "Tech Community",
+      "product": "Mimecast",
+      "rating": 3,
+      "review_text": "Mining Mimecast: brute forcing your way to success\n\n",
+      "reviewer": "darkport",
+      "source_url": "https://cyber.schillingspartners.com/mining-mimecast-brute-forcing-your-way-to-success/",
+      "date_scraped": "2025-06-30T17:39:22.401332",
+      "content_type": "community_discussion",
+      "verified": true,
+      "scraping_source": "alternative_api"
+    },
+    {
+      "platform": "Tech Community",
+      "product": "Mimecast",
+      "rating": 3,
+      "review_text": "Email security firm Mimecast says hackers hijacked products to spy on customers\n\n",
+      "reviewer": "samizdis",
+      "source_url": "https://www.reuters.com/article/us-global-cyber-mimecast/email-security-firm-mimecast-says-hackers-hijacked-its-products-to-spy-on-customers-idUSKBN29H22K",
+      "date_scraped": "2025-06-30T17:39:22.401315",
+      "content_type": "community_discussion",
+      "verified": true,
+      "scraping_source": "alternative_api"
+    }
+  ],
+  "source_platforms": [
+    "Tech Community"
+  ],
+  "cache_version": "3.0",
+  "scraping_methods": [
+    "alternative_api"
+  ]
+}

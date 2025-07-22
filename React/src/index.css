@@ -1,0 +1,105 @@
+/* Reset and base styles for a clean React environment */
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  
+  /* Color scheme support */
+  color-scheme: light dark;
+  
+  /* Enhanced spacing for better touch targets */
+  --min-touch-target: 44px;
+  
+  /* Improved color contrast ratios */
+  --text-high-contrast: #000000;
+  --text-medium-contrast: #323130;
+  --text-low-contrast: #605e5c;
+  --bg-primary: #ffffff;
+  --bg-secondary: #f3f2f1;
+  --border-subtle: #e1dfdd;
+  --focus-ring: #0078d4;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  
+  /* Improved text rendering */
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+  /* Better scrolling on mobile */
+  -webkit-overflow-scrolling: touch;
+  
+  /* Ensure minimum font size for readability */
+  font-size: max(16px, 1rem);
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text-high-contrast: #ffffff;
+    --text-medium-contrast: #f3f2f1;
+    --text-low-contrast: #c8c6c4;
+    --bg-primary: #1b1a19;
+    --bg-secondary: #201f1e;
+    --border-subtle: #323130;
+  }
+}
+
+#root {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Ensure interactive elements are large enough */
+button, 
+input, 
+select, 
+textarea, 
+[role="button"], 
+[role="tab"],
+[role="menuitem"] {
+  min-height: var(--min-touch-target);
+  min-width: var(--min-touch-target);
+}
+
+/* Enhanced focus indicators */
+*:focus-visible {
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Remove focus outline for mouse users */
+*:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Improve readability of placeholder text */
+::placeholder {
+  color: var(--text-low-contrast);
+  opacity: 1;
+}
+
+/* Better selection styling */
+::selection {
+  background-color: var(--focus-ring);
+  color: white;
+}
+
+/* Ensure sufficient contrast for disabled elements */
+:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Responsive images */
+img {
+  max-width: 100%;
+  height: auto;
+}

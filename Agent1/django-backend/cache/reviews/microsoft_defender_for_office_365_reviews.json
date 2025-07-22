@@ -1,0 +1,103 @@
+{
+  "product": "Microsoft Defender for Office 365",
+  "last_updated": "2025-07-21T08:42:46.914150",
+  "total_reviews": 6,
+  "reviews": [
+    {
+      "platform": "Reddit r/sysadmin",
+      "product": "Microsoft Defender for Office 365",
+      "rating": 4,
+      "review_text": "365 Defender P2 / AIR help.. Need some insight from someone who's used Defender P2 a fair amount. We do not use Defender for Endpoint - just 365 Defender, for emails. I brought my tenant onto P2, based on the promise of 'Automated Investigation and Response'. The goal was to be able to report a malicious email from Explorer, have it linked to all related emails in different  mailboxes then have them removed. On my main tenant - this works. I can report an email as phishing / initiate AIR from Explorer, and it will get ZAP'd",
+      "reviewer": "u/Woolfie_Admin",
+      "source_url": "https://www.reddit.com/r/sysadmin/comments/1krx9i9/365_defender_p2_air_help/",
+      "date_scraped": "2025-05-21T06:01:57",
+      "content_type": "customer_experience",
+      "verified": true,
+      "upvotes": 1,
+      "num_comments": 0,
+      "customer_score": 3,
+      "authenticity": "verified_customer_experience"
+    },
+    {
+      "platform": "Reddit r/cybersecurity",
+      "product": "Microsoft Defender for Office 365",
+      "rating": 3,
+      "review_text": "Need help with interview please. I have an interview ( second round ) this week for a Security Engineer Role with a large wealth management company. I'm kinda nervous, can yall help me with tips / technical questions that I maybe asked please? It's conducted by a 3 member panel with 1 security manager and 2 security engineers. \n\nHere's the job description: \n\n\nThe ideal candidate is passionate about all aspects of Security with strong skills in Zero Trust implementations.\n\nThe Successful Candidate Will Have The Following Respons",
+      "reviewer": "u/Puzzleheaded_Nose_80",
+      "source_url": "https://www.reddit.com/r/cybersecurity/comments/1ked9ap/need_help_with_interview_please/",
+      "date_scraped": "2025-05-03T23:26:02",
+      "content_type": "customer_experience",
+      "verified": true,
+      "upvotes": 7,
+      "num_comments": 5,
+      "customer_score": 3,
+      "authenticity": "verified_customer_experience"
+    },
+    {
+      "platform": "Reddit r/cybersecurity",
+      "product": "Microsoft Defender for Office 365",
+      "rating": 3,
+      "review_text": "Need help with interview please. I have an interview ( second round ) this week for a Security Engineer Role with a large wealth management company. I'm kinda nervous, can yall help me with tips / technical questions that I maybe asked please? It's conducted by a 3 member panel with 1 security manager and 2 security engineers. \n\nHere's the job description: \n\n\nThe ideal candidate is passionate about all aspects of Security with strong skills in Zero Trust implementations.\n\nThe Successful Candidate Will Have The Following Respons",
+      "reviewer": "u/Puzzleheaded_Nose_80",
+      "source_url": "https://www.reddit.com/r/cybersecurity/comments/1ked9ap/need_help_with_interview_please/",
+      "date_scraped": "2025-05-03T23:26:02",
+      "content_type": "customer_experience",
+      "verified": true,
+      "upvotes": 7,
+      "num_comments": 5,
+      "customer_score": 3,
+      "authenticity": "verified_customer_experience"
+    },
+    {
+      "platform": "Reddit r/cybersecurity",
+      "product": "Microsoft Defender for Office 365",
+      "rating": 3,
+      "review_text": "Microsoft 365 Defender Incidents & Alerts Investigations. We are slowly moving towards adopting Microsoft Defender as our primary security platform and are currently conducting Email threat investigations within the Incidents & Alerts portal. Due to the sensitivity of the data being investigated, we are trying to keep it separated from the IT ticketing platform as we do not want to unnecessarily duplicate evidence, artifacts, and data.\n\nI would appreciate some thoughts or experiences on performing investigations on Incidents in Microsoft Defender as th",
+      "reviewer": "u/Lyellwolf",
+      "source_url": "https://www.reddit.com/r/cybersecurity/comments/1f9nu9w/microsoft_365_defender_incidents_alerts/",
+      "date_scraped": "2024-09-05T07:30:24",
+      "content_type": "customer_experience",
+      "verified": true,
+      "upvotes": 1,
+      "num_comments": 3,
+      "customer_score": 1,
+      "authenticity": "verified_customer_experience"
+    },
+    {
+      "platform": "Reddit r/Office365",
+      "product": "Microsoft Defender for Office 365",
+      "rating": 3,
+      "review_text": "Another Licencing Question Defender ATP Edition. We are a hybrid org with every device on prem joined to the domain users are synced to Entra but devices are not hybrid entra joined.   We have more devices than M365 users and after an hour meeting with our Microsoft rep I still don't have a clear answer on what licenses I need for our devices all of which aren't specifically assigned to a user.   I am being told that each user with a defender P1 or P2 licence can have 5 devices covered by defender.  The lack of clarity I have is that no one ca",
+      "reviewer": "u/jstar77",
+      "source_url": "https://www.reddit.com/r/Office365/comments/1f4ve33/another_licencing_question_defender_atp_edition/",
+      "date_scraped": "2024-08-30T06:34:19",
+      "content_type": "customer_experience",
+      "verified": true,
+      "upvotes": 2,
+      "num_comments": 3,
+      "customer_score": 1,
+      "authenticity": "verified_customer_experience"
+    },
+    {
+      "platform": "Reddit r/sysadmin",
+      "product": "Microsoft Defender for Office 365",
+      "rating": 4,
+      "review_text": "Thoughts on Mimecast vs Microsoft's EOP? Is greylisting important?. We've been considering moving away from Mimecast in our small-ish company (<100 users) due to cost and user complaints. Our users all have Microsoft/Office 365 licenses and Exchange emails that would allow them to use [Exchange Online Protection](https://learn.microsoft.com/en-us/defender-office-365/eop-about) for no extra cost.\n\nIt looks to cover nearly everything we use Mimecast for, except greymail. It sounds like Microsoft isn't intending to implement it in EOP, and it isn't part of [Defende",
+      "reviewer": "u/Brief_Touch_669",
+      "source_url": "https://www.reddit.com/r/sysadmin/comments/1exxcao/thoughts_on_mimecast_vs_microsofts_eop_is/",
+      "date_scraped": "2024-08-21T11:37:14",
+      "content_type": "customer_experience",
+      "verified": true,
+      "upvotes": 6,
+      "num_comments": 15,
+      "customer_score": 1,
+      "authenticity": "verified_customer_experience"
+    }
+  ],
+  "source_platforms": [
+    "Reddit r/Office365",
+    "Reddit r/sysadmin",
+    "Reddit r/cybersecurity"
+  ],
+  "cache_version": "2.0"
+}

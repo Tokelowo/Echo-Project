@@ -1,0 +1,8 @@
+# Additional dependencies for real customer reviews integration
+beautifulsoup4==4.12.2
+praw==7.7.1
+textblob==0.17.1
+python-dotenv==1.0.0
+requests==2.31.0
+lxml==4.9.3
+html5lib==1.1

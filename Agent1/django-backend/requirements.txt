@@ -1,0 +1,32 @@
+# Core Django dependencies
+Django>=4.2.0
+djangorestframework>=3.14.0
+django-cors-headers>=4.0.0
+
+# Environment and configuration
+python-dotenv>=1.0.0
+
+# Web scraping and data processing
+requests>=2.31.0
+beautifulsoup4>=4.12.2
+lxml>=4.9.3
+html5lib>=1.1
+
+# Text processing and analysis
+textblob>=0.17.1
+
+# Reddit API (if needed)
+praw>=7.7.1
+
+# Document generation (Agent 2 - Formatting Agent)
+python-docx>=1.1.0
+
+# Database (SQLite is built-in with Python)
+# For production, you might want to add PostgreSQL or other DB drivers
+
+# Security and authentication
+# cryptography>=3.4.8
+
+# Additional utilities
+Pillow>=9.0.0
+pytz>=2023.3
