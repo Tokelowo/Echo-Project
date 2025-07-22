@@ -1,2 +1,3 @@
  django-backend/backend/__pycache_/
  django-backend/research_agent/__pycache/
+ .env
