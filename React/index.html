@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Echo - React Environment</title>
+    <style>
+      #debug {
+        display: none;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: #f0f0f0;
+        padding: 10px;
+        border-top: 1px solid #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <div id="debug"></div>
+    <script>
+      const debug = document.getElementById('debug');
+      window.addEventListener('error', function(event) {
+        debug.style.display = 'block';
+        debug.innerHTML += `<p>Error: ${event.message}</p>`;
+      });
+      console.error = (...args) => {
+        debug.style.display = 'block';
+        debug.innerHTML += `<p>Console Error: ${args.join(' ')}</p>`;
+      };
+      console.log = (...args) => {
+        debug.style.display = 'block';
+        debug.innerHTML += `<p>Log: ${args.join(' ')}</p>`;
+      };
+    </script>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
