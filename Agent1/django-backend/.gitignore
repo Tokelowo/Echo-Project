@@ -1,2 +1,2 @@
- django-backend/backend/__pycache_/
- django-backend/research_agent/__pycache/
+backend/__pycache__/
+research_agent/__pycache__/

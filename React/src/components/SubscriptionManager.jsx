@@ -77,7 +77,7 @@ const SubscriptionManager = () => {
     setError('');
     
     try {
-      const response = await fetch(`http://127.0.0.1:8000/manage-subscriptions/?email=${encodeURIComponent(userEmail)}`);
+      const response = await fetch(`http://localhost:8000/api/manage-subscriptions/?email=${encodeURIComponent(userEmail)}`);
       const data = await response.json();
       
       if (data.success) {
@@ -99,7 +99,7 @@ const SubscriptionManager = () => {
     setError('');
 
     try {
-      const response = await fetch(`http://127.0.0.1:8000/subscription/${subscriptionId}/update/`, {
+      const response = await fetch(`http://localhost:8000/api/subscription/${subscriptionId}/update/`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -129,7 +129,7 @@ const SubscriptionManager = () => {
     setError('');
 
     try {
-      const response = await fetch(`http://127.0.0.1:8000/subscription/${subscriptionId}/unsubscribe/`, {
+      const response = await fetch(`http://localhost:8000/api/subscription/${subscriptionId}/unsubscribe/`, {
         method: 'DELETE',
       });
 
@@ -155,7 +155,7 @@ const SubscriptionManager = () => {
     setError('');
 
     try {
-      const response = await fetch('http://127.0.0.1:8000/unsubscribe-all/', {
+      const response = await fetch('http://localhost:8000/api/unsubscribe-all/', {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json',
@@ -185,7 +185,7 @@ const SubscriptionManager = () => {
     setError('');
 
     try {
-      const response = await fetch(`http://127.0.0.1:8000/subscription/${subscriptionId}/reactivate/`, {
+      const response = await fetch(`http://localhost:8000/api/subscription/${subscriptionId}/reactivate/`, {
         method: 'POST',
       });
 

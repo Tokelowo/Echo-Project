@@ -1,4 +1,4 @@
-const API_BASE_URL = "http://127.0.0.1:8000";
+const API_BASE_URL = "http://localhost:8000";
 
 // API timeout configuration
 const API_TIMEOUT = 30000; // 30 seconds timeout
@@ -56,7 +56,7 @@ export const fetchData = async (endpoint, options = {}) => {
 
 export const fetchEnhancedMarketIntelligence = async (forceRefresh = false) => {
   try {
-    const endpoint = `/enhanced-market-intelligence/?force_refresh=${forceRefresh}`;
+    const endpoint = `/api/enhanced-market-intelligence/?force_refresh=${forceRefresh}`;
     return await fetchData(endpoint);
   } catch (error) {
     throw error;
@@ -65,7 +65,7 @@ export const fetchEnhancedMarketIntelligence = async (forceRefresh = false) => {
 
 export const fetchCompetitiveMetrics = async (forceRefresh = false) => {
   try {
-    const endpoint = `/competitive-metrics/?force_refresh=${forceRefresh}`;
+    const endpoint = `/api/competitive-metrics/?force_refresh=${forceRefresh}`;
     return await fetchData(endpoint);
   } catch (error) {
     throw error;
@@ -74,7 +74,7 @@ export const fetchCompetitiveMetrics = async (forceRefresh = false) => {
 
 export const fetchMarketIntelligence = async () => {
   try {
-    return await fetchData('/market-intelligence/');
+    return await fetchData('/api/market-intelligence/');
   } catch (error) {
     throw error;
   }
@@ -82,7 +82,7 @@ export const fetchMarketIntelligence = async () => {
 
 export const fetchOverviewData = async (forceRefresh = false) => {
   try {
-    const endpoint = `/overview/?force_refresh=${forceRefresh}`;
+    const endpoint = `/api/overview/?force_refresh=${forceRefresh}`;
     return await fetchData(endpoint);
   } catch (error) {
     throw error;
@@ -91,7 +91,7 @@ export const fetchOverviewData = async (forceRefresh = false) => {
 
 export const fetchCustomerReviews = async (forceRefresh = false) => {
   try {
-    const endpoint = `/customer-reviews/?force_refresh=${forceRefresh}`;
+    const endpoint = `/api/customer-reviews/?force_refresh=${forceRefresh}`;
     return await fetchData(endpoint);
   } catch (error) {
     throw error;
@@ -102,7 +102,7 @@ export const fetchCustomerReviews = async (forceRefresh = false) => {
 export const fetchRealMarketTrendsData = async (forceRefresh = false) => {
   try {
     const params = forceRefresh ? '?force_refresh=true' : '';
-    const response = await fetchData(`/real-market-trends-data/${params}`);
+    const response = await fetchData(`/api/real-market-trends-data/${params}`);
     
     if (response.error) {
       throw new Error(response.message || 'Failed to fetch real market trends data');
@@ -119,7 +119,7 @@ export const fetchRealMarketTrendsData = async (forceRefresh = false) => {
 export const fetchEnhancedProductIntelligence = async (forceRefresh = false) => {
   try {
     const params = forceRefresh ? '?force_refresh=true' : '';
-    const response = await fetchData(`/research-agent/enhanced-product-intelligence/${params}`);
+    const response = await fetchData(`/api/enhanced-product-intelligence/${params}`);
     
     if (response.error) {
       throw new Error(response.message || 'Failed to fetch enhanced product intelligence');
@@ -135,7 +135,7 @@ export const fetchEnhancedProductIntelligence = async (forceRefresh = false) => 
 // Refresh product intelligence data manually
 export const refreshProductIntelligence = async () => {
   try {
-    const response = await fetchData('/research-agent/refresh-product-intelligence/', {
+    const response = await fetchData('/api/refresh-product-intelligence/', {
       method: 'POST'
     });
     
@@ -153,7 +153,7 @@ export const refreshProductIntelligence = async () => {
 // Get product intelligence status
 export const getProductIntelligenceStatus = async () => {
   try {
-    const response = await fetchData('/research-agent/product-intelligence-status/');
+    const response = await fetchData('/api/product-intelligence-status/');
     
     if (response.error) {
       throw new Error(response.message || 'Failed to get product intelligence status');

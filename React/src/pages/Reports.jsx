@@ -122,15 +122,17 @@ const Reports = () => {
     setError(null);
     
     try {
-      const result = await fetchResearchAgentData('/comprehensive-research/', {
+      const result = await fetchResearchAgentData('/pipeline/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
           input: 'Generate comprehensive research report covering market trends, competitive analysis, and product intelligence',
-          focus_areas: ['Market Analysis', 'Competitive Intelligence', 'Product Strategy'],
+          user_email: 'reports.generator@demo.local',
           user_name: 'Report Generator',
+          agent_type: 'comprehensive_research',
+          focus_areas: ['Market Analysis', 'Competitive Intelligence', 'Product Strategy'],
         }),
       });
       

@@ -63,9 +63,10 @@ export const exportToExcel = (reportData) => {
 };
 
 export async function fetchResearchAgentData(endpoint = '', options = {}) {
-  const BASE_URL = 'http://127.0.0.1:8000/research-agent';
+  const BASE_URL = 'http://localhost:8000/api';
   try {
     const response = await fetch(BASE_URL + endpoint, {
+      method: 'GET',
       headers: {
         'Content-Type': 'application/json',
         ...options.headers,

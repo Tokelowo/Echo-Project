@@ -119,7 +119,7 @@ const MarketTrends = () => {
     setEmailDialogOpen(false);
     
     try {
-      const response = await fetch('http://127.0.0.1:8000/research-agent/pipeline/', {
+      const response = await fetch('http://localhost:8000/api/pipeline/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -206,7 +206,7 @@ const MarketTrends = () => {
     );
   }
 
-  const emailSecurityMarketData = generateEmailSecurityMarketData();
+  const emailSecurityMarketData = realMarketTrends?.marketData || generateEmailSecurityMarketData();
   const threatEvolutionData = generateThreatEvolutionData();
   const techAdoptionData = generateTechAdoptionData();
   const marketShareData = generateMarketShareData();

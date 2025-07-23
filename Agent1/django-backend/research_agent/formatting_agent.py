@@ -1272,6 +1272,82 @@ class FormattingAgent:
             </div>
         """
         
+        # Add featured articles section with real URLs
+        featured_articles = report_data.get('featured_articles', [])
+        if featured_articles:
+            html_content += """
+            <div class="section">
+                <h3>📰 Featured Security Articles</h3>
+                <p style="margin-bottom: 20px; color: #605e5c;">Real-time cybersecurity intelligence from trusted sources:</p>
+            """
+            
+            for article in featured_articles[:6]:  # Show top 6 articles
+                title = article.get('title', 'Security Update')
+                url = article.get('url', '#')
+                source = article.get('source', 'Security News')
+                summary = article.get('summary', 'Important security development')
+                
+                # Truncate summary for email display
+                if len(summary) > 120:
+                    summary = summary[:120] + "..."
+                
+                html_content += f"""
+                <div style="background-color: #f8f9fa; padding: 15px; margin-bottom: 15px; border-radius: 6px; border-left: 4px solid #0078d4;">
+                    <h4 style="margin: 0 0 8px 0; font-size: 16px;">
+                        <a href="{url}" style="color: #0078d4; text-decoration: none; font-weight: 600;" target="_blank">
+                            {title}
+                        </a>
+                    </h4>
+                    <p style="margin: 8px 0; color: #323130; font-size: 14px; line-height: 1.5;">{summary}</p>
+                    <div style="font-size: 12px; color: #605e5c;">
+                        <strong>Source:</strong> {source} | 
+                        <a href="{url}" style="color: #0078d4; text-decoration: none;" target="_blank">Read Full Article →</a>
+                    </div>
+                </div>
+                """
+            
+            html_content += """
+            </div>
+            """
+        
+        # Add Microsoft-specific articles if available
+        microsoft_articles = report_data.get('microsoft_articles', [])
+        if microsoft_articles:
+            html_content += """
+            <div class="section">
+                <h3>🔷 Microsoft Security Updates</h3>
+                <p style="margin-bottom: 20px; color: #605e5c;">Latest developments in Microsoft security solutions:</p>
+            """
+            
+            for article in microsoft_articles[:3]:  # Show top 3 Microsoft articles
+                title = article.get('title', 'Microsoft Security Update')
+                url = article.get('url', '#')
+                source = article.get('source', 'Security News')
+                summary = article.get('summary', 'Microsoft security development')
+                
+                # Truncate summary for email display
+                if len(summary) > 100:
+                    summary = summary[:100] + "..."
+                
+                html_content += f"""
+                <div style="background-color: #e7f3ff; padding: 15px; margin-bottom: 15px; border-radius: 6px; border-left: 4px solid #0078d4;">
+                    <h4 style="margin: 0 0 8px 0; font-size: 15px;">
+                        <a href="{url}" style="color: #0078d4; text-decoration: none; font-weight: 600;" target="_blank">
+                            {title}
+                        </a>
+                    </h4>
+                    <p style="margin: 8px 0; color: #323130; font-size: 14px;">{summary}</p>
+                    <div style="font-size: 12px; color: #605e5c;">
+                        <strong>Source:</strong> {source} | 
+                        <a href="{url}" style="color: #0078d4; text-decoration: none;" target="_blank">Read More →</a>
+                    </div>
+                </div>
+                """
+            
+            html_content += """
+            </div>
+            """
+        
         # Add real-time insights section
         insights = self._extract_email_insights(report_data)
         if insights:
@@ -1451,6 +1527,50 @@ Generated: {gen_time}
 
 🔍 TODAY'S KEY INSIGHTS
 {chr(10).join([f'• {insight}' for insight in insights[:3]])}
+"""
+        
+        # Add featured articles
+        featured_articles = report_data.get('featured_articles', [])
+        if featured_articles:
+            plain_text += f"""
+
+📰 FEATURED SECURITY ARTICLES
+Real-time cybersecurity intelligence from trusted sources:
+"""
+            for i, article in enumerate(featured_articles[:5], 1):  # Top 5 articles for plain text
+                title = article.get('title', 'Security Update')
+                url = article.get('url', '#')
+                source = article.get('source', 'Security News')
+                summary = article.get('summary', 'Important security development')
+                
+                # Truncate summary for plain text
+                if len(summary) > 100:
+                    summary = summary[:100] + "..."
+                
+                plain_text += f"""
+{i}. {title}
+   Source: {source}
+   Summary: {summary}
+   Read more: {url}
+"""
+        
+        # Add Microsoft-specific articles
+        microsoft_articles = report_data.get('microsoft_articles', [])
+        if microsoft_articles:
+            plain_text += f"""
+
+🔷 MICROSOFT SECURITY UPDATES
+Latest developments in Microsoft security solutions:
+"""
+            for i, article in enumerate(microsoft_articles[:3], 1):  # Top 3 Microsoft articles
+                title = article.get('title', 'Microsoft Security Update')
+                url = article.get('url', '#')
+                source = article.get('source', 'Security News')
+                
+                plain_text += f"""
+{i}. {title}
+   Source: {source}
+   Read more: {url}
 """
         
         # Add attachment notice

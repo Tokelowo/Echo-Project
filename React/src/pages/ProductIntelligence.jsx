@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { fetchData, fetchCustomerReviews } from '../utils/api';
+import { fetchData } from '../utils/api';
 import { fetchResearchAgentData } from '../utils/reportExport';
 import EmailSubscriptionDialog from '../components/EmailSubscriptionDialog';
 import {
@@ -122,14 +122,14 @@ const ProductIntelligence = () => {
         if (!controller.signal.aborted) {
           controller.abort();
         }
-      }, 15000) : null; // 15 second timeout
+      }, 8000) : null; // Reduced timeout to 8 seconds for faster UX
       
       // Check if signal is already aborted
       if (signal?.aborted) {
         return;
       }
       
-      // Fetch real product intelligence data from backend API
+      // Fetch real product intelligence data from backend API (now optimized with caching)
       const response = await fetchResearchAgentData('/product-intelligence/', {
         signal: signal
       });
@@ -137,17 +137,6 @@ const ProductIntelligence = () => {
       if (timeoutId) clearTimeout(timeoutId);
       
       if (response) {
-        // Fetch customer reviews separately
-        let customerReviews = [];
-        try {
-          const reviewsResponse = await fetchCustomerReviews(false);
-          if (reviewsResponse && reviewsResponse.reviews) {
-            customerReviews = reviewsResponse.reviews;
-          }
-        } catch (reviewError) {
-          console.warn('Could not fetch customer reviews:', reviewError);
-        }
-
         // Use the new backend data structure with proper disclaimers
         setProductData({
           metrics: {
@@ -163,11 +152,8 @@ const ProductIntelligence = () => {
             // Market analysis with real data
             marketAnalysis: response.market_analysis || {},
             
-            // Customer sentiment with real customer reviews
-            customerSentiment: {
-              ...response.customer_sentiment,
-              real_customer_reviews: customerReviews // Add the fetched reviews here
-            },
+            // Customer sentiment from product intelligence API (includes Reddit reviews)
+            customerSentiment: response.metrics?.customerSentiment || {},
             
             // Technology analysis
             technologyAnalysis: response.technology_analysis || {},
@@ -228,15 +214,17 @@ const ProductIntelligence = () => {
     setError(null);
     
     try {
-      const result = await fetchResearchAgentData('/product-intelligence/', {
+      const result = await fetchResearchAgentData('/pipeline/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
           input: 'Product intelligence analysis for AI-powered security and analytics solutions',
-          focus_areas: ['Market Opportunities', 'Product Features', 'Competitive Position', 'Growth Potential'],
+          user_email: 'product.intelligence@demo.local',
           user_name: 'Product Intelligence User',
+          agent_type: 'product_intelligence',
+          focus_areas: ['Market Opportunities', 'Product Features', 'Competitive Position', 'Growth Potential'],
         }),
       });
       
@@ -265,7 +253,7 @@ const ProductIntelligence = () => {
     setEmailDialogOpen(false);
     
     try {
-      const response = await fetch('http://127.0.0.1:8000/research-agent/pipeline/', {
+      const response = await fetch('http://localhost:8000/api/pipeline/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
