@@ -279,14 +279,15 @@ class EnhancedEmailService:
                 report_data, recipient_name
             )
             
-            # Generate enhanced email content with new formatter (includes customer reviews)
-            email_content = self.enhanced_formatter.create_enhanced_email_summary(
-                report_data, recipient_name, docx_filename
+            # Generate enhanced email content using the FormattingAgent (which has Reddit integration)
+            email_content = self.formatting_agent.create_branded_email_summary(
+                report_data, recipient_name
             )
             
             # Create email message
+            subject = f"Microsoft Defender Intelligence Report - With Reddit Customer Reviews"
             msg = EmailMultiAlternatives(
-                subject=email_content['subject'],
+                subject=subject,
                 body=email_content['plain_text_body'],
                 from_email=settings.DEFAULT_FROM_EMAIL,
                 to=[recipient_email]

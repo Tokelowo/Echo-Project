@@ -1348,6 +1348,60 @@ class FormattingAgent:
             </div>
             """
         
+        # Add Reddit Reviews section with customer experiences
+        reddit_reviews = report_data.get('reddit_reviews', [])
+        if reddit_reviews:
+            html_content += """
+            <div class="section">
+                <h3>💬 Customer Experiences from Reddit</h3>
+                <p style="margin-bottom: 20px; color: #605e5c;">Real customer feedback and discussions from cybersecurity communities:</p>
+            """
+            
+            for review in reddit_reviews[:4]:  # Show top 4 Reddit reviews
+                platform = review.get('platform', 'Reddit')
+                reviewer = review.get('reviewer', 'Anonymous')
+                review_text = review.get('review_text', 'Customer feedback')
+                source_url = review.get('source_url', '#')
+                rating = review.get('rating', 3)
+                upvotes = review.get('upvotes', 0)
+                num_comments = review.get('num_comments', 0)
+                
+                # Truncate review text for email display
+                if len(review_text) > 200:
+                    review_text = review_text[:200] + "..."
+                
+                # Rating display
+                star_rating = "⭐" * int(rating) + "☆" * (5 - int(rating))
+                
+                html_content += f"""
+                <div style="background-color: #f8f9fa; padding: 20px; margin-bottom: 15px; border-radius: 8px; border-left: 4px solid #ff4500;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                        <h4 style="margin: 0; font-size: 15px; color: #ff4500;">
+                            <strong>{reviewer}</strong> on {platform}
+                        </h4>
+                        <div style="font-size: 14px;">
+                            {star_rating} ({rating}/5)
+                        </div>
+                    </div>
+                    <p style="margin: 10px 0; color: #323130; font-size: 14px; line-height: 1.6; font-style: italic;">
+                        "{review_text}"
+                    </p>
+                    <div style="font-size: 12px; color: #605e5c; display: flex; justify-content: space-between; align-items: center;">
+                        <div>
+                            <span style="margin-right: 15px;">👍 {upvotes} upvotes</span>
+                            <span style="margin-right: 15px;">💬 {num_comments} replies</span>
+                        </div>
+                        <a href="{source_url}" style="color: #ff4500; text-decoration: none; font-weight: 600;" target="_blank">
+                            View Discussion →
+                        </a>
+                    </div>
+                </div>
+                """
+            
+            html_content += """
+            </div>
+            """
+        
         # Add real-time insights section
         insights = self._extract_email_insights(report_data)
         if insights:
@@ -1573,6 +1627,37 @@ Latest developments in Microsoft security solutions:
    Read more: {url}
 """
         
+        # Add Reddit Reviews section
+        reddit_reviews = report_data.get('reddit_reviews', [])
+        if reddit_reviews:
+            plain_text += f"""
+
+💬 CUSTOMER EXPERIENCES FROM REDDIT
+Real customer feedback from cybersecurity communities:
+"""
+            for i, review in enumerate(reddit_reviews[:4], 1):  # Top 4 Reddit reviews
+                platform = review.get('platform', 'Reddit')
+                reviewer = review.get('reviewer', 'Anonymous')
+                review_text = review.get('review_text', 'Customer feedback')
+                source_url = review.get('source_url', '#')
+                rating = review.get('rating', 3)
+                upvotes = review.get('upvotes', 0)
+                num_comments = review.get('num_comments', 0)
+                
+                # Truncate review text for plain text
+                if len(review_text) > 150:
+                    review_text = review_text[:150] + "..."
+                
+                # Rating display
+                star_rating = "★" * int(rating) + "☆" * (5 - int(rating))
+                
+                plain_text += f"""
+{i}. {reviewer} on {platform} - {star_rating} ({rating}/5)
+   "{review_text}"
+   👍 {upvotes} upvotes | 💬 {num_comments} replies
+   Discussion: {source_url}
+"""
+        
         # Add attachment notice
         if docx_filename:
             plain_text += f"""
@@ -1779,7 +1864,7 @@ Intelligent email security for the modern workplace
         """
         
         # Extract and add insights from each report
-        for report in reports_data:
+        for report in digest_data['reports']:
             report_title = report.get('title', 'Untitled Report')
             report_insights = self._extract_email_insights(report)
             
@@ -1859,18 +1944,6 @@ Intelligent email security for the modern workplace
                 <a href="https://aka.ms/defendersupport">Support</a>
             </div>
         """
-        
-        # Add unsubscribe section for subscription emails
-        if is_subscription and unsubscribe_url:
-            html_content += f"""
-            <div class="unsubscribe-section">
-                <p style="margin: 5px 0;">You're receiving this because you subscribed to {subscription_frequency} intelligence reports.</p>
-                <p style="margin: 5px 0;">
-                    <a href="{manage_url}">Update preferences</a> | 
-                    <a href="{unsubscribe_url}">Unsubscribe</a>
-                </p>
-            </div>
-            """
         
         html_content += """
         </div>
