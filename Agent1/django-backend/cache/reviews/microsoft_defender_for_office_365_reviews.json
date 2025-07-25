@@ -1,6 +1,6 @@
 {
   "product": "Microsoft Defender for Office 365",
-  "last_updated": "2025-07-24T11:11:39.712320",
+  "last_updated": "2025-07-25T09:05:09.310599",
   "total_reviews": 6,
   "reviews": [
     {
@@ -28,7 +28,7 @@
       "date_scraped": "2025-05-03T23:26:02",
       "content_type": "customer_experience",
       "verified": true,
-      "upvotes": 7,
+      "upvotes": 6,
       "num_comments": 5,
       "customer_score": 3,
       "authenticity": "verified_customer_experience"
@@ -95,8 +95,8 @@
     }
   ],
   "source_platforms": [
-    "Reddit r/cybersecurity",
     "Reddit r/Office365",
+    "Reddit r/cybersecurity",
     "Reddit r/sysadmin"
   ],
   "cache_version": "2.0"
