@@ -43,13 +43,14 @@ BASE_MIDDLEWARE = [
 
 if DEBUG:
     # Development middleware - includes security middleware but with relaxed settings
-    MIDDLEWARE = BASE_MIDDLEWARE
+    MIDDLEWARE = BASE_MIDDLEWARE + [
+        'research_agent.security_middleware.EnhancedSecurityMiddleware',
+    ]
 else:
     # Production middleware - full security with additional custom middleware
     MIDDLEWARE = [
-        'research_agent.security_middleware.SecurityMiddleware',
-        'research_agent.security_middleware.EmailSecurityMiddleware', 
-        'research_agent.security_middleware.APIKeyAuthMiddleware',
+        'research_agent.security_middleware.EnhancedSecurityMiddleware',
+        'research_agent.security_middleware.APIKeyAuthenticationMiddleware',
         'django.middleware.security.SecurityMiddleware',
     ] + BASE_MIDDLEWARE
 
@@ -186,12 +187,32 @@ REPORTS_DIR = os.path.join(MEDIA_ROOT, 'reports')
 # Ensure reports directory exists
 os.makedirs(REPORTS_DIR, exist_ok=True)
 
-# Security settings
+# Security settings with enhanced protection
 SECURE_BROWSER_XSS_FILTER = True
 SECURE_CONTENT_TYPE_NOSNIFF = True
 X_FRAME_OPTIONS = 'DENY'
 SECURE_REFERRER_POLICY = 'strict-origin-when-cross-origin'
 SECURE_CROSS_ORIGIN_OPENER_POLICY = 'same-origin'
+
+# Enhanced security settings
+DATA_UPLOAD_MAX_MEMORY_SIZE = 10485760  # 10MB
+FILE_UPLOAD_MAX_MEMORY_SIZE = 10485760  # 10MB
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
+# Session security
+SESSION_COOKIE_AGE = 3600  # 1 hour
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True
+SESSION_COOKIE_HTTPONLY = True
+SESSION_COOKIE_SAMESITE = 'Lax'
+
+# CSRF protection
+CSRF_COOKIE_HTTPONLY = True
+CSRF_COOKIE_SAMESITE = 'Lax'
+CSRF_TRUSTED_ORIGINS = ['https://localhost:3000', 'https://127.0.0.1:3000']
+
+# Additional security headers
+SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+SECURE_HSTS_PRELOAD = True
 
 # Development-friendly security settings
 if DEBUG:

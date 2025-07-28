@@ -38,19 +38,19 @@ class CybersecurityNewsService:
             'hacker_news': {
                 'name': 'The Hacker News',
                 'rss_url': 'https://feeds.feedburner.com/TheHackersNews',
-                'website': 'https://thehackernews.com',
-                'priority': 'high'
-            },
-            'cybernews': {
-                'name': 'CyberNews',
-                'rss_url': 'https://cybernews.com/feed/',
-                'website': 'https://cybernews.com',
+                'website': 'thehackernews.com',
                 'priority': 'high'
             },
             'security_week': {
                 'name': 'SecurityWeek',
                 'rss_url': 'https://www.securityweek.com/feed/',
                 'website': 'https://www.securityweek.com',
+                'priority': 'high'
+            },
+            'krebs_security': {
+                'name': 'Krebs on Security',
+                'rss_url': 'https://krebsonsecurity.com/feed/',
+                'website': 'https://krebsonsecurity.com',
                 'priority': 'medium'
             }
         }
@@ -65,10 +65,13 @@ class CybersecurityNewsService:
         """Set up requests session with proper headers"""
         self.session = requests.Session()
         self.session.headers.update({
-            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
-            'Accept': 'application/rss+xml, application/xml, text/xml',
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36',
+            'Accept': 'application/rss+xml, application/xml, text/xml, */*',
             'Accept-Language': 'en-US,en;q=0.9',
-            'Cache-Control': 'no-cache'
+            'Accept-Encoding': 'gzip, deflate, br',
+            'DNT': '1',
+            'Connection': 'keep-alive',
+            'Upgrade-Insecure-Requests': '1'
         })
         
         # Initialize MDO/email security keywords

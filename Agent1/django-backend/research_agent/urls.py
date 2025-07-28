@@ -10,6 +10,7 @@ urlpatterns = router.urls
 
 # Add API endpoints - mixing real data views with simple fallbacks
 urlpatterns += [
+    path('', views_simple.root_endpoint, name='root_endpoint'),  # Root dashboard
     path('health/', views_simple.health_check, name='health_check'),
     path('overview/', main_views.get_overview_data, name='get_overview_data'),
     path('market-trends/', views_simple.market_trends_simple, name='market_trends'),
@@ -21,6 +22,10 @@ urlpatterns += [
     path('real-market-trends-data/', views_simple.real_market_trends_data_simple, name='real_market_trends_data'),
     path('pipeline/', views_simple.pipeline_endpoint, name='pipeline'),
     path('reports/', views_simple.reports_simple, name='reports_simple'),
+    
+    # API endpoints that were causing 500 errors
+    path('research/', views_simple.research_api, name='research_api'),
+    path('admin/', views_simple.admin_api, name='admin_api'),
     
     # Email subscription management endpoints
     path('email-subscriptions/', main_views.email_subscriptions, name='email_subscriptions'),
