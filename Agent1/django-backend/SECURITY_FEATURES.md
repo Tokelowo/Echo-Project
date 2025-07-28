@@ -26,7 +26,7 @@ This document outlines the comprehensive security implementation across both the
   - `/api/reports/` - Sensitive reporting data
 - **Header-based Authentication**: `X-API-KEY` header required for protected endpoints
 - **Secure Key Management**: Environment variable storage with complex key generation
-- **API Key**: `mdo-security-2024-enhanced-api-key-f8e9d0a1b2c3d4e5f6789xyz`
+- **API Key**: `[REDACTED - Stored in .env file for security]`
 
 ### 3. Enhanced Django Security Settings
 ```python
