@@ -46,7 +46,7 @@
 - **Real-time Data Analysis** - 100% live intelligence feeds
 
 ### 📧 **Enterprise Email System**
-- **SendGrid Integration** - Professional email infrastructure
+- **SendGrid Integration** - Professional email infrastructure ⚠️ **Expires September 2025**
 - **Subscription Management** - Automated daily/weekly delivery
 - **Personalized Content** - Recipient-specific intelligence
 - **Unsubscribe Management** - CAN-SPAM compliant
@@ -116,8 +116,11 @@ For complete setup instructions, see **[TEAM_SETUP.md](TEAM_SETUP.md)** - our st
 ### 📋 **System Requirements**
 - **Python 3.8+** and **Node.js 16+**
 - **Git** for version control
-- **SendGrid API Key** for email delivery
+- **SendGrid API Key** for email delivery ⚠️ **Current subscription expires September 2025**
 - **OpenAI API Key** for intelligence processing
+
+### 🚨 **Email Service Notice**
+**The current SendGrid subscription expires in September 2025.** For continued email functionality, teams will need to set up their own email service. See [TEAM_SETUP.md](TEAM_SETUP.md) for configuration options including SendGrid, Gmail, and Outlook.
 
 ---
 
