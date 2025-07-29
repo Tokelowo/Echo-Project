@@ -122,6 +122,10 @@ class EnhancedSecurityMiddleware(MiddlewareMixin):
     
     def is_rate_limited(self, ip, request):
         """Check rate limiting per IP"""
+        # Skip rate limiting for localhost in development
+        if ip in ['127.0.0.1', 'localhost', '::1'] and getattr(settings, 'DEBUG', False):
+            return False
+            
         now = time.time()
         key = f'rate_limit_{ip}'
         
