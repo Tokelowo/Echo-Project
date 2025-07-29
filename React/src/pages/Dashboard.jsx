@@ -813,23 +813,13 @@ const Dashboard = () => {
         {overviewData?.recent_reports && overviewData.recent_reports.length > 0 && (
           <Grid item xs={12} md={6}>
             <Paper sx={{ p: 3 }}>
-              <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 2 }}>
-                <Box>
-                  <Typography variant="h6">
-                    🛡️ Latest Cybersecurity Intelligence
-                  </Typography>
-                  <Typography variant="caption" color="text.secondary">
-                    Real-time news from BleepingComputer, The Hacker News, Infosecurity Magazine, Dark Reading & more
-                  </Typography>
-                </Box>
-                <Button
-                  size="small"
-                  variant="outlined"
-                  startIcon={<ReportIcon />}
-                  onClick={() => navigate('/reports')}
-                >
-                  View All
-                </Button>
+              <Box sx={{ mb: 2 }}>
+                <Typography variant="h6">
+                  🛡️ Latest Cybersecurity Intelligence
+                </Typography>
+                <Typography variant="caption" color="text.secondary">
+                  Real-time news from BleepingComputer, The Hacker News, Infosecurity Magazine, Dark Reading & more
+                </Typography>
               </Box>
               <Box>
                 {overviewData.recent_reports.slice(0, 5).map((report) => (
@@ -888,22 +878,9 @@ const Dashboard = () => {
                           </Typography>
                         </Box>
                       </Box>
-                      <IconButton 
-                        size="small" 
-                        onClick={() => navigate('/reports')}
-                        sx={{ ml: 1 }}
-                        title="View detailed analysis"
-                      >
-                        <Visibility fontSize="small" />
-                      </IconButton>
                     </Box>
                   </Box>
                 ))}
-                {overviewData.recent_reports.length > 5 && (
-                  <Typography variant="body2" color="text.secondary" sx={{ textAlign: 'center', mt: 2 }}>
-                    +{overviewData.recent_reports.length - 5} more intelligence reports
-                  </Typography>
-                )}
               </Box>
             </Paper>
           </Grid>

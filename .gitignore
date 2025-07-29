@@ -1,0 +1,50 @@
+# Security - Never commit these files
+.env
+.env.local
+.env.production
+.env.development
+*.key
+*.pem
+*.p12
+secrets.json
+
+# Django
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+.Python
+*.so
+.coverage
+.pytest_cache/
+htmlcov/
+.tox/
+.coverage
+.cache
+nosetests.xml
+coverage.xml
+*.log
+
+# Database
+db.sqlite3
+*.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+debug_*.py
+test_*.py
+verify_*.py
+
+# Node modules (if any)
+node_modules/
