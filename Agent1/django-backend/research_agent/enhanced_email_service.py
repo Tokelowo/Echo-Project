@@ -54,11 +54,12 @@ class EnhancedEmailService:
                 report_data, recipient_name, docx_filename
             )
             
-            # Create email message
+            # Create email message with professional sender identity
+            professional_from_email = "Echo Cybersecurity Intelligence <t-tokelowo@microsoft.com>"
             msg = EmailMultiAlternatives(
                 subject=email_content['subject'],
                 body=email_content['plain_text_body'],
-                from_email=settings.DEFAULT_FROM_EMAIL,
+                from_email=professional_from_email,
                 to=[recipient_email]
             )
             
@@ -284,12 +285,13 @@ class EnhancedEmailService:
                 report_data, recipient_name
             )
             
-            # Create email message
+            # Create email message with professional sender identity
             subject = f"Microsoft Defender Intelligence Report - With Reddit Customer Reviews"
+            professional_from_email = "Echo Cybersecurity Intelligence <t-tokelowo@microsoft.com>"
             msg = EmailMultiAlternatives(
                 subject=subject,
                 body=email_content['plain_text_body'],
-                from_email=settings.DEFAULT_FROM_EMAIL,
+                from_email=professional_from_email,
                 to=[recipient_email]
             )
             
