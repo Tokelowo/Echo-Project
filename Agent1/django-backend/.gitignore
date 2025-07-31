@@ -1,2 +1,21 @@
 backend/__pycache__/
 research_agent/__pycache__/
+
+# Environment variables with actual secrets
+.env.local.backup
+.env.production
+*.env.local
+
+# Database
+db.sqlite3
+
+# Cache and logs
+cache/
+*.log
+
+# Media files
+media/
+
+# Virtual environment
+venv/
+env/

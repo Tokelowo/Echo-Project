@@ -1,5 +1,5 @@
 # PowerShell script to set up daily email task
-$ScriptPath = "c:\Users\t-tokelowo\OneDrive - Microsoft\Agent 1\django-backend\send_daily_emails.bat"
+$ScriptPath = "c:\Users\t-tokelowo\Documents\Echo Project\Agent1\django-backend\send_daily_emails.bat"
 $TaskName = "DailyEmailReports"
 $Time = "09:00"
 
