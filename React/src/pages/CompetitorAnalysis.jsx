@@ -237,7 +237,7 @@ const CompetitorAnalysis = () => {
     <Box sx={{ p: 3 }}>
       <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 3 }}>
         <Typography variant="h4" component="h1">
-          MDO & Email Security Competitive Analysis
+          🛡️ MDO & Email Security Competitive Analysis
         </Typography>
         <Box sx={{ display: 'flex', gap: 1 }}>
           <Button

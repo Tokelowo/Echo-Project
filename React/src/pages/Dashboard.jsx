@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import {
   Grid,
@@ -407,10 +407,10 @@ const Dashboard = () => {
       <Box display="flex" justifyContent="space-between" alignItems="center" mb={3}>
         <Box>
           <Typography variant="h4" component="h1">
-            🛡️ Real-Time Intelligence Dashboard
+            🛡️ Echo Intelligence Dashboard - Microsoft Defender for Office 365
           </Typography>
           <Typography variant="body2" color="textSecondary" sx={{ mt: 1 }}>
-            📡 Live cybersecurity threat intelligence • Last updated: {
+            📡 Live MDO market intelligence & threat analysis • Last updated: {
               overviewData?.lastUpdated 
                 ? new Date(overviewData.lastUpdated).toLocaleString()
                 : new Date().toLocaleString()
@@ -462,7 +462,7 @@ const Dashboard = () => {
           <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', width: '100%' }}>
             <Box>
               <Typography variant="body1">
-                ✅ Real data from live sources updated: {overviewData?.lastUpdated ? 
+                • Real data from live sources updated: {overviewData?.lastUpdated ? 
                   new Date(overviewData.lastUpdated).toLocaleString() : 
                   lastUpdated?.toLocaleString()}
               </Typography>
@@ -565,7 +565,7 @@ const Dashboard = () => {
           <Grid item xs={12} md={8}>
             <Paper sx={{ p: 3 }}>
               <Typography variant="h6" gutterBottom>
-                Real-Time Market Presence (News Coverage Analysis)
+                🛡️ Real-Time Market Presence (News Coverage Analysis)
               </Typography>
               <Box sx={{ mb: 2, p: 2, backgroundColor: '#f5f5f5', borderRadius: 1 }}>
                 <Typography variant="body2" color="text.secondary">
@@ -733,7 +733,7 @@ const Dashboard = () => {
           <Grid item xs={12} md={6}>
             <Paper sx={{ p: 3 }}>
               <Typography variant="h6" gutterBottom>
-                <PsychologyIcon sx={{ mr: 1 }} />
+                🛡️ <PsychologyIcon sx={{ mr: 1 }} />
                 Latest Microsoft Developments
               </Typography>
               {overviewData.market_intelligence.microsoft_news.slice(0, 3).map((article, index) => (
@@ -835,9 +835,9 @@ const Dashboard = () => {
                           />
                           <Chip
                             label={report.category === 'threat_protection' ? '🛡️ Threat Protection' :
-                                   report.category === 'product_updates' ? '⚡ Product Updates' :
+                                   report.category === 'product_updates' ? '• Product Updates' :
                                    report.category === 'threat_intelligence' ? '🔍 Threat Intel' :
-                                   report.category === 'emerging_threats' ? '⚠️ Emerging Threats' :
+                                   report.category === 'emerging_threats' ? '•️ Emerging Threats' :
                                    report.category === 'malware_analysis' ? '🦠 Malware' :
                                    report.category === 'security_updates' ? '🔒 Security Updates' :
                                    report.category === 'market_trends' ? '📈 Market Trends' : '📋 Compliance'}
@@ -1005,7 +1005,7 @@ const Dashboard = () => {
               • Competitive Intelligence: Real-time vendor mentions, market presence analysis from live sources
             </Typography>
             <Typography variant="caption" color="success.main" sx={{ display: 'block', mt: 1, fontStyle: 'italic', fontWeight: 'bold' }}>
-              ✅ NO DEMO DATA - All metrics calculated from {overviewData?.articlesAnalyzed || 0} real articles analyzed on {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+              • NO DEMO DATA - All metrics calculated from {overviewData?.articlesAnalyzed || 0} real articles analyzed on {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
             </Typography>
           </Paper>
         </Grid>
@@ -1065,3 +1065,6 @@ const Dashboard = () => {
 };
 
 export default Dashboard;
+
+
+

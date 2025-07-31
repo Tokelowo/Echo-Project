@@ -330,7 +330,7 @@ const ProductIntelligence = () => {
       <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 3 }}>
         <Box>
           <Typography variant="h4" component="h1" gutterBottom>
-            Product Intelligence
+            🛡️ Product Intelligence
           </Typography>
           <Typography variant="body1" color="text.secondary">
             AI-powered insights into product opportunities, market positioning, and competitive advantages.

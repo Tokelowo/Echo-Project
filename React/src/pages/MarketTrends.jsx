@@ -201,7 +201,7 @@ const MarketTrends = () => {
     return (
       <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '400px' }}>
         <CircularProgress size={60} />
-        <Typography variant="h6" sx={{ ml: 2 }}>Loading Email Security Market Trends...</Typography>
+        <Typography variant="h6" sx={{ ml: 2 }}>🛡️ Loading Echo MDO Market Intelligence...</Typography>
       </Box>
     );
   }
@@ -217,8 +217,7 @@ const MarketTrends = () => {
       <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 3 }}>
         <Box>
           <Typography variant="h4" gutterBottom sx={{ fontWeight: 'bold' }}>
-            <Email sx={{ mr: 2, verticalAlign: 'middle' }} />
-            Email Security Market Trends
+            🛡️ Echo Intelligence Platform
           </Typography>
           <Typography variant="subtitle1" color="text.secondary">
             Microsoft Defender for Office 365 Market Analysis & Competitive Intelligence

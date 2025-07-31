@@ -172,7 +172,7 @@ const Reports = () => {
     <Box sx={{ p: 3 }}>
       <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 3 }}>
         <Typography variant="h4" component="h1">
-          Reports
+          🛡️ Reports
         </Typography>
         <Box sx={{ display: 'flex', gap: 1 }}>
           <Button
