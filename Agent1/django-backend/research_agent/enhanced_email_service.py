@@ -55,7 +55,7 @@ class EnhancedEmailService:
             )
             
             # Create email message with professional sender identity
-            professional_from_email = "Echo Cybersecurity Intelligence <t-tokelowo@microsoft.com>"
+            professional_from_email = "Echo Cybersecurity Intelligence <Temiloluwaokelowo@gmail.com>"
             msg = EmailMultiAlternatives(
                 subject=email_content['subject'],
                 body=email_content['plain_text_body'],
@@ -287,7 +287,7 @@ class EnhancedEmailService:
             
             # Create email message with professional sender identity
             subject = f"Microsoft Defender Intelligence Report - With Reddit Customer Reviews"
-            professional_from_email = "Echo Cybersecurity Intelligence <t-tokelowo@microsoft.com>"
+            professional_from_email = "Echo Cybersecurity Intelligence <Temiloluwaokelowo@gmail.com>"
             msg = EmailMultiAlternatives(
                 subject=subject,
                 body=email_content['plain_text_body'],
